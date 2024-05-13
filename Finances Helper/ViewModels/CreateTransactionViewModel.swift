@@ -1,5 +1,4 @@
-//
-//  CreateTransactionViewModel.swift
+// CreateTransactionViewModel.swift
 //  Finances Helper
 //
 //  Created by Kendrick  on 10/05/24.
@@ -10,8 +9,10 @@ import Combine
 import CoreData
 import SwiftUI
 
-class CreateTransactionViewModel: ObservableObject{
+// ViewModel for creating transactions
+class CreateTransactionViewModel: ObservableObject {
     
+    // Published properties for transaction details
     @Published var transactionType: TransactionType = .expense
     @Published var note: String = ""
     @Published var amount: Double = 0
@@ -19,40 +20,46 @@ class CreateTransactionViewModel: ObservableObject{
     @Published var selectedSubCategoryId: String?
     @Published var selectedCategory: CategoryEntity?
     @Published var categories = [CategoryEntity]()
-
+    
+    // Published properties for managing category creation view
     @Published var createCategoryViewType: CreateCategoryViewType?
     @Published var categoryColor: Color = .blue
     @Published var categoryTitle: String = ""
     
+    // ResourceStore for managing CategoryEntity resources
     private let categoriesStore: ResourceStore<CategoryEntity>
     private var cancelBag = CancelBag()
     private let context: NSManagedObjectContext
     
-    init(context: NSManagedObjectContext, transactionType: TransactionType){
+    // Initialize CreateTransactionViewModel with a Core Data context and transaction type
+    init(context: NSManagedObjectContext, transactionType: TransactionType) {
         self.context = context
         self.transactionType = transactionType
         categoriesStore = ResourceStore(context: context)
         
-        startSubsCategories()
+        startSubscribingCategories()
         
         fetchCategories()
-        
     }
     
-    deinit{
+    // Deinitializer
+    deinit {
         cancelBag.cancel()
     }
     
-    var disabledSave: Bool{
+    // Computed property to determine if the save button should be disabled
+    var disabledSave: Bool {
         amount == 0 || selectedCategory == nil
     }
     
-    private func fetchCategories(){
+    // Fetch categories from Core Data
+    private func fetchCategories() {
         let request = CategoryEntity.request()
         categoriesStore.fetch(request)
     }
     
-    private func startSubsCategories(){
+    // Subscribe to changes in categories
+    private func startSubscribingCategories() {
         categoriesStore.resources
             .sink { categories in
                 self.categories = categories
@@ -60,21 +67,24 @@ class CreateTransactionViewModel: ObservableObject{
             .store(in: cancelBag)
     }
     
-    
-    func toogleSelectCategory(_ category: CategoryEntity){
+    // Toggle selection of a category
+    func toggleSelectCategory(_ category: CategoryEntity) {
         selectedCategory = category.objectID == selectedCategory?.objectID ? nil : category
     }
     
-    func toogleSelectSubcategory(_ categoryId: String){
+    // Toggle selection of a subcategory
+    func toggleSelectSubcategory(_ categoryId: String) {
         selectedSubCategoryId = categoryId == selectedSubCategoryId ? nil : categoryId
     }
     
-    func create(type: TransactionType, date: Date, forAccount: AccountEntity?, created: UserEntity?){
+    // Create a transaction
+    func create(type: TransactionType, date: Date, forAccount: AccountEntity?, created: UserEntity?) {
         guard let selectedCategory, let forAccount, let created else { return }
         TransactionEntity.create(amount: amount, createAt: date, type: type, created: created, account: forAccount, category: selectedCategory, subcategoryId: selectedSubCategoryId, note: note, context: context)
     }
 
-    func addCategory(){
+    // Add a new category
+    func addCategory() {
         let category = CategoryEntity.create(context: context, title: categoryTitle, color: categoryColor.toHex(), subcategories: nil, isParent: true, type: transactionType)
         context.saveContext()
         createCategoryViewType = nil
@@ -82,8 +92,9 @@ class CreateTransactionViewModel: ObservableObject{
         selectedCategory = category
     }
     
-    func addSubcategory(){
-        if let selectedCategory{
+    // Add a new subcategory
+    func addSubcategory() {
+        if let selectedCategory {
             let subcategory = CategoryEntity.create(context: context, title: categoryTitle, color: categoryColor.toHex(), subcategories: nil, isParent: false, type: transactionType)
             selectedCategory.wrappedSubcategories = [subcategory]
             context.saveContext()
