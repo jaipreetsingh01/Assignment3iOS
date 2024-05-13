@@ -13,7 +13,7 @@ struct CustomDatePickerView: View {
     var body: some View {
         GeometryReader { proxy in
             VStack(alignment: .leading, spacing: 10){
-                mounthSection
+                monthSection
                 daysSection
                 dates
             }
@@ -37,7 +37,7 @@ struct CustomCalendarView_Previews: PreviewProvider {
 
 
 extension CustomDatePickerView{
-    private var mounthSection: some View{
+    private var monthSection: some View{
         HStack{
             HStack(spacing: 0){
                 Button {

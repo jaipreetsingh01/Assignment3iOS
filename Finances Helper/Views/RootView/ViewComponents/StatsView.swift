@@ -8,17 +8,17 @@
 import SwiftUI
 
 struct StatsView: View {
-    @State private var showLine: Bool = false
     @Binding var isExpand: Bool
-    @Namespace var animation
+    @Namespace var animation // animating view transitions
     @ObservedObject var rootVM: RootViewModel
     var chartData: [ChartData]
     var body: some View {
+        // views on top of each other - stat view, state stuff , DONUT CHART is from viewComponents
         ZStack(alignment: .top){
             ZStack(alignment: .center){
                     DonutChart(chartData: chartData)
                         .frame(height: 200)
-                        .padding(.vertical, 26)
+                        .padding(.vertical, 20)
                         .matchedGeometryEffect(id: "CHART", in: animation)
                         .transition(.scale.combined(with: .opacity))
                 
@@ -49,14 +49,15 @@ struct StatsView: View {
                     .background(Color.blue, in: Circle())
             }
             
-            .scaleEffect(showLine ? 0.7 : 1)
-            .padding(showLine ? 5 : 16)
+            .scaleEffect(1)
+            .padding(16)
         }
-        .onChange(of: isExpand) { expand in
-            withAnimation(.easeInOut(duration: 0.3)) {
-                showLine = expand
-            }
-        }
+        
+// @jp - Animating the + icon button on isExpand, this has issues
+//        .onChange(of: isExpand) { expand in
+//            withAnimation(.easeInOut(duration: 0.3)) {
+//            }
+//        }
     }
 }
 
@@ -78,13 +79,16 @@ extension StatsView{
     }
     
     private var datePickerButtons: some View{
-        HStack(spacing: 15) {
+        HStack(spacing: 20) {
+            // for the 5 scenaiors we have  label, on tap - set as active filter
             ForEach(TransactionTimeFilter.allCases) { type in
                 labelView(type)
                     .onTapGesture {
                         rootVM.timeFilter = type
                     }
             }
+            
+            // special - case , if this is selected we toggle the boolean which will display the calender
             labelView(TransactionTimeFilter.select(.now, .now))
                 .onTapGesture {
                     rootVM.showDatePicker.toggle()

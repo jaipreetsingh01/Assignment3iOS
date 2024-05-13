@@ -34,7 +34,6 @@ struct CreateAccountView: View {
                 balanceSection
                 balanceTitle
                 colorSection
-                inviteButton
                 saveButton
                 removeButton
             }
@@ -107,14 +106,14 @@ extension CreateAccountView{
         }
     }
     
-    private var inviteButton: some View{
-        Button {
-            
-        } label: {
-            Text("Invite users")
-        }
-        .hLeading()
-    }
+//    private var inviteButton: some View{
+//        Button {
+//            
+//        } label: {
+//            Text("Invite users")
+//        }
+//        .hLeading()
+//    }
     
     private var saveButton: some View{
         Button {

@@ -21,6 +21,7 @@ struct TransactionNavigationTabView: View {
                     .padding(.bottom, 5)
                     .padding(.horizontal, 5)
                     .overlay(alignment: .bottom) {
+                        // if active add underline effect
                         if type == rootVM.currentTab{
                             RoundedRectangle(cornerRadius: 2)
                                 .frame(height: 2)

@@ -10,7 +10,7 @@ import SwiftUI
 struct SheetDatePicker: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var rootVM: RootViewModel
-    @State var slectedDate = Date.now.noon
+    @State var selectedDate = Date.now.noon
     var body: some View {
         VStack {
             HStack{
@@ -21,12 +21,12 @@ struct SheetDatePicker: View {
                 }
                 Spacer()
             }
-            CustomDatePickerView(selectedDate: $slectedDate)
+            CustomDatePickerView(selectedDate: $selectedDate)
                 .padding(.top)
             Spacer()
         }
         .padding()
-//        .onChange(of: slectedDate) { newValue in
+//        .onChange(of: selectedDate) { newValue in
 //            rootVM.timeFilter = .select(newValue)
 //            dismiss()
 //        }

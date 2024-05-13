@@ -16,6 +16,7 @@ struct RootView: View {
             VStack(spacing: 16) {
                 // if no active account we show ProgressView() for loading
                 if let _ = rootVM.activeAccount{
+                    // defined below with extension
                     navigationView
                     // settung up the expense & income tabs
                     TabView(selection: $rootVM.currentTab) {
@@ -93,11 +94,6 @@ extension RootView{
                             .imageScale(.large)
                     }
                     Spacer()
-//                    Button {
-//                        rootVM.generateCSV()
-//                    } label: {
-//                        Image(systemName: "square.and.arrow.up")
-//                    }
                 }
                 .foregroundColor(.black)
             }

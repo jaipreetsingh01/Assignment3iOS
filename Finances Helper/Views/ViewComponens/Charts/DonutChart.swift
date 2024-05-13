@@ -12,6 +12,7 @@ struct DonutChart : View {
         chartData.first?.cyrrencySymbol ?? "$"
     }
     var chartData: [ChartData]
+    // represent selected slice, by default no slice
     @State private var selectedSlice = -1
     
     var total: Double{
@@ -19,10 +20,13 @@ struct DonutChart : View {
     }
     var body: some View {
         GeometryReader { proxy in
+            // ZStack to overlay multiple views
             ZStack {
                 Circle()
                     .stroke(Color(.systemGray6), lineWidth: 40)
+                // Outer circle representing the background of the donut chart
                 ForEach(chartData.indices, id:\.self) { index in
+                    // Iterate through the chart data to draw each slice of the donut chart
                     Circle()
                         .trim(from: index == 0 ? 0.0 : chartData[index-1].slicePercent,
                               to: chartData[index].slicePercent)
@@ -36,6 +40,7 @@ struct DonutChart : View {
                                     selectedSlice = -1
                                 }
                         )
+                    // If the slice is selected, apply a scale effect to highlight it
                         .scaleEffect(index == selectedSlice ? 1.05 : 1.0)
                         .animation(.spring(), value: selectedSlice)
                 }

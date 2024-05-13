@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct MainSectionView: View {
-//    @State var offset: CGFloat = 0
     @Binding var isExpandStats: Bool
     @ObservedObject var rootVM: RootViewModel
     let chartData: [ChartData]
     var body: some View {
         VStack(spacing: 0) {
+            //is expand has a ease in out animation on change, we pass the chart data & observed object to this view
             StatsView(isExpand: $isExpandStats, rootVM: rootVM, chartData: chartData)
                 .padding(.horizontal)
             ScrollView(.vertical, showsIndicators: false) {

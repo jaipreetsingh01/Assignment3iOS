@@ -26,7 +26,7 @@ struct TransactionsListView: View {
                             .padding(.vertical, 5)
                             .background(group.color, in: Capsule())
                         Spacer()
-                        Text("\(Int(group.persentage * 100))%")
+                        Text("\(Int(group.percentage * 100))%")
                             .foregroundColor(.secondary)
                         Text(group.friendlyTotal)
                             .foregroundColor(.black)
