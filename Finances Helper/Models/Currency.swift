@@ -59,7 +59,7 @@ struct Currency: Identifiable {
     
     
     static var popularCurrency: [Currency]{
-        let code = ["USD", "EUR", "GBR", "AUD", "INR"]
+        let code = ["AUD","PHP","INR","USD", "EUR"]
         return code.compactMap({Currency.currency(for: $0)})
     }
 }
