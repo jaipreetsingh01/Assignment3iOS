@@ -1,0 +1,845 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5AC0AC0329DEB50A008008AF /* AccountsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC0229DEB50A008008AF /* AccountsListViewModel.swift */; };
+		5AC0AC0529DEB57F008008AF /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC0429DEB57F008008AF /* CancelBag.swift */; };
+		5AC0AC0A29DEDB11008008AF /* MainSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC0929DEDB11008008AF /* MainSectionView.swift */; };
+		5AC0AC0C29DF015B008008AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC0B29DF015B008008AF /* AppDelegate.swift */; };
+		5AC0AC0F29DF01AA008008AF /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC0E29DF01AA008008AF /* AppEnvironment.swift */; };
+		5AC0AC1A29DF09FA008008AF /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC1929DF09FA008008AF /* CategoriesView.swift */; };
+		5AC0AC1C29DF0A02008008AF /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC1B29DF0A02008008AF /* CategoriesViewModel.swift */; };
+		5AC0AC2629DF128C008008AF /* RKViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC1F29DF128C008008AF /* RKViewController.swift */; };
+		5AC0AC2729DF128C008008AF /* RKManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC2029DF128C008008AF /* RKManager.swift */; };
+		5AC0AC2829DF128C008008AF /* RKWeekdayHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC2129DF128C008008AF /* RKWeekdayHeader.swift */; };
+		5AC0AC2929DF128C008008AF /* RKMonth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC2229DF128C008008AF /* RKMonth.swift */; };
+		5AC0AC2A29DF128C008008AF /* RKCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC2329DF128C008008AF /* RKCell.swift */; };
+		5AC0AC2B29DF128C008008AF /* RKColorSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC2429DF128C008008AF /* RKColorSettings.swift */; };
+		5AC0AC2C29DF128C008008AF /* RKDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC2529DF128C008008AF /* RKDate.swift */; };
+		5AC0AC2E29DF1317008008AF /* RKCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC0AC2D29DF1317008008AF /* RKCalendar.swift */; };
+		5AD358E129DAC00F0035E1D3 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358E029DAC00F0035E1D3 /* DonutChart.swift */; };
+		5AD358E329DAC0520035E1D3 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358E229DAC0520035E1D3 /* ChartData.swift */; };
+		5AD358E529DAC8A10035E1D3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358E429DAC8A10035E1D3 /* Color.swift */; };
+		5AD358E829DACB0B0035E1D3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358E729DACB0B0035E1D3 /* Helper.swift */; };
+		5AD358EA29DAD3A30035E1D3 /* TagLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358E929DAD3A30035E1D3 /* TagLayout.swift */; };
+		5AD358ED29DADAB70035E1D3 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358EC29DADAB70035E1D3 /* UserService.swift */; };
+		5AD358EF29DAE30C0035E1D3 /* CategoriesTagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358EE29DAE30C0035E1D3 /* CategoriesTagsView.swift */; };
+		5AD358F229DAF29A0035E1D3 /* CreateCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358F129DAF29A0035E1D3 /* CreateCategoryView.swift */; };
+		5AD358F929DB19800035E1D3 /* Algorithms in Frameworks */ = {isa = PBXBuildFile; productRef = 5AD358F829DB19800035E1D3 /* Algorithms */; };
+		5AD358FB29DC33AD0035E1D3 /* TransactionNavigationTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358FA29DC33AD0035E1D3 /* TransactionNavigationTabView.swift */; };
+		5AD358FD29DC38B90035E1D3 /* TransactionStatData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358FC29DC38B90035E1D3 /* TransactionStatData.swift */; };
+		5AD358FF29DC3E9C0035E1D3 /* TransactionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD358FE29DC3E9C0035E1D3 /* TransactionsListView.swift */; };
+		5AD3590229DC595B0035E1D3 /* CustomDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3590129DC595B0035E1D3 /* CustomDatePickerView.swift */; };
+		5AD3590529DC5ADB0035E1D3 /* SheetDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3590429DC5ADB0035E1D3 /* SheetDatePicker.swift */; };
+		5AD3590829DC698B0035E1D3 /* CategoryGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3590729DC698B0035E1D3 /* CategoryGroupView.swift */; };
+		5AD3590A29DD69200035E1D3 /* TransactionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3590929DD69200035E1D3 /* TransactionDetailsView.swift */; };
+		5AD3590E29DD80390035E1D3 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3590D29DD80390035E1D3 /* CreateAccountView.swift */; };
+		5AD3591029DD80B70035E1D3 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3590F29DD80B70035E1D3 /* CreateAccountViewModel.swift */; };
+		5AD3591529DDAAB60035E1D3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3591429DDAAB60035E1D3 /* SideMenuView.swift */; };
+		5AD3591729DDAAC90035E1D3 /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3591629DDAAC90035E1D3 /* SideMenuViewModel.swift */; };
+		5AD3591929DDB1F80035E1D3 /* AccountsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3591829DDB1F80035E1D3 /* AccountsListView.swift */; };
+		5ADA553629D6E8F2007FE8C4 /* Finances_HelperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA553529D6E8F2007FE8C4 /* Finances_HelperApp.swift */; };
+		5ADA553829D6E8F2007FE8C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA553729D6E8F2007FE8C4 /* ContentView.swift */; };
+		5ADA553A29D6E8F4007FE8C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA553929D6E8F4007FE8C4 /* Assets.xcassets */; };
+		5ADA553D29D6E8F4007FE8C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADA553C29D6E8F4007FE8C4 /* Preview Assets.xcassets */; };
+		5ADA554C29D6E961007FE8C4 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA554B29D6E961007FE8C4 /* PersistenceController.swift */; };
+		5ADA555029D6E972007FE8C4 /* CoreDataContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA554E29D6E972007FE8C4 /* CoreDataContainer.xcdatamodeld */; };
+		5ADA555229D6E995007FE8C4 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA555129D6E995007FE8C4 /* CoreDataManager.swift */; };
+		5ADA555529D6F499007FE8C4 /* TransactionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA555429D6F499007FE8C4 /* TransactionEntity.swift */; };
+		5ADA555829D6F5AC007FE8C4 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA555729D6F5AC007FE8C4 /* Date+Ext.swift */; };
+		5ADA555A29D70598007FE8C4 /* AccountEntity+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA555929D70598007FE8C4 /* AccountEntity+Ext.swift */; };
+		5ADA555C29D70818007FE8C4 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA555B29D70818007FE8C4 /* UserEntity.swift */; };
+		5ADA556029D70C70007FE8C4 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA555F29D70C70007FE8C4 /* RootViewModel.swift */; };
+		5ADA556329D70E11007FE8C4 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA556229D70E11007FE8C4 /* RootView.swift */; };
+		5ADA556629D70E51007FE8C4 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA556529D70E51007FE8C4 /* Preview.swift */; };
+		5ADA556929D7105C007FE8C4 /* CurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA556829D7105C007FE8C4 /* CurrencyView.swift */; };
+		5ADA556F29D710BA007FE8C4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA556E29D710BA007FE8C4 /* Currency.swift */; };
+		5ADA557129D71137007FE8C4 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA557029D71137007FE8C4 /* Double.swift */; };
+		5ADA557929D71A13007FE8C4 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA557829D71A13007FE8C4 /* StatsView.swift */; };
+		5ADA558129D727D9007FE8C4 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA558029D727D9007FE8C4 /* View+Ext.swift */; };
+		5ADA558329D72C31007FE8C4 /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA558229D72C31007FE8C4 /* CategoryEntity.swift */; };
+		5ADA558529D72D0A007FE8C4 /* ResourceStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA558429D72D0A007FE8C4 /* ResourceStore.swift */; };
+		5ADA558829D7358C007FE8C4 /* CreateTransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA558729D7358C007FE8C4 /* CreateTransactionView.swift */; };
+		5ADA558A29D7361E007FE8C4 /* TransactionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA558929D7361E007FE8C4 /* TransactionType.swift */; };
+		5ADA558F29D7378D007FE8C4 /* NumberTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA558E29D7378D007FE8C4 /* NumberTextField.swift */; };
+		5ADA559129D737B8007FE8C4 /* CreateTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADA559029D737B8007FE8C4 /* CreateTransactionViewModel.swift */; };
+		5AF57F0929E556010034C80D /* RangeCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 5AF57F0829E556010034C80D /* RangeCalendar */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5AC0AC0229DEB50A008008AF /* AccountsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsListViewModel.swift; sourceTree = "<group>"; };
+		5AC0AC0429DEB57F008008AF /* CancelBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		5AC0AC0929DEDB11008008AF /* MainSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSectionView.swift; sourceTree = "<group>"; };
+		5AC0AC0B29DF015B008008AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5AC0AC0E29DF01AA008008AF /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		5AC0AC1929DF09FA008008AF /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		5AC0AC1B29DF0A02008008AF /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		5AC0AC1F29DF128C008008AF /* RKViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKViewController.swift; sourceTree = "<group>"; };
+		5AC0AC2029DF128C008008AF /* RKManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKManager.swift; sourceTree = "<group>"; };
+		5AC0AC2129DF128C008008AF /* RKWeekdayHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKWeekdayHeader.swift; sourceTree = "<group>"; };
+		5AC0AC2229DF128C008008AF /* RKMonth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKMonth.swift; sourceTree = "<group>"; };
+		5AC0AC2329DF128C008008AF /* RKCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKCell.swift; sourceTree = "<group>"; };
+		5AC0AC2429DF128C008008AF /* RKColorSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKColorSettings.swift; sourceTree = "<group>"; };
+		5AC0AC2529DF128C008008AF /* RKDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RKDate.swift; sourceTree = "<group>"; };
+		5AC0AC2D29DF1317008008AF /* RKCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RKCalendar.swift; sourceTree = "<group>"; };
+		5AD358E029DAC00F0035E1D3 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
+		5AD358E229DAC0520035E1D3 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		5AD358E429DAC8A10035E1D3 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		5AD358E729DACB0B0035E1D3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		5AD358E929DAD3A30035E1D3 /* TagLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagLayout.swift; sourceTree = "<group>"; };
+		5AD358EC29DADAB70035E1D3 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		5AD358EE29DAE30C0035E1D3 /* CategoriesTagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTagsView.swift; sourceTree = "<group>"; };
+		5AD358F129DAF29A0035E1D3 /* CreateCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCategoryView.swift; sourceTree = "<group>"; };
+		5AD358FA29DC33AD0035E1D3 /* TransactionNavigationTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionNavigationTabView.swift; sourceTree = "<group>"; };
+		5AD358FC29DC38B90035E1D3 /* TransactionStatData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionStatData.swift; sourceTree = "<group>"; };
+		5AD358FE29DC3E9C0035E1D3 /* TransactionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsListView.swift; sourceTree = "<group>"; };
+		5AD3590129DC595B0035E1D3 /* CustomDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePickerView.swift; sourceTree = "<group>"; };
+		5AD3590429DC5ADB0035E1D3 /* SheetDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetDatePicker.swift; sourceTree = "<group>"; };
+		5AD3590729DC698B0035E1D3 /* CategoryGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryGroupView.swift; sourceTree = "<group>"; };
+		5AD3590929DD69200035E1D3 /* TransactionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetailsView.swift; sourceTree = "<group>"; };
+		5AD3590D29DD80390035E1D3 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		5AD3590F29DD80B70035E1D3 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		5AD3591429DDAAB60035E1D3 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		5AD3591629DDAAC90035E1D3 /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		5AD3591829DDB1F80035E1D3 /* AccountsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsListView.swift; sourceTree = "<group>"; };
+		5ADA553229D6E8F2007FE8C4 /* Finances Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finances Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ADA553529D6E8F2007FE8C4 /* Finances_HelperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finances_HelperApp.swift; sourceTree = "<group>"; };
+		5ADA553729D6E8F2007FE8C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5ADA553929D6E8F4007FE8C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5ADA553C29D6E8F4007FE8C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5ADA554B29D6E961007FE8C4 /* PersistenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		5ADA554F29D6E972007FE8C4 /* CoreDataContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataContainer.xcdatamodel; sourceTree = "<group>"; };
+		5ADA555129D6E995007FE8C4 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5ADA555429D6F499007FE8C4 /* TransactionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionEntity.swift; sourceTree = "<group>"; };
+		5ADA555729D6F5AC007FE8C4 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
+		5ADA555929D70598007FE8C4 /* AccountEntity+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccountEntity+Ext.swift"; sourceTree = "<group>"; };
+		5ADA555B29D70818007FE8C4 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
+		5ADA555F29D70C70007FE8C4 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		5ADA556229D70E11007FE8C4 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5ADA556529D70E51007FE8C4 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		5ADA556829D7105C007FE8C4 /* CurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyView.swift; sourceTree = "<group>"; };
+		5ADA556E29D710BA007FE8C4 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		5ADA557029D71137007FE8C4 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		5ADA557829D71A13007FE8C4 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
+		5ADA558029D727D9007FE8C4 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		5ADA558229D72C31007FE8C4 /* CategoryEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
+		5ADA558429D72D0A007FE8C4 /* ResourceStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceStore.swift; sourceTree = "<group>"; };
+		5ADA558729D7358C007FE8C4 /* CreateTransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionView.swift; sourceTree = "<group>"; };
+		5ADA558929D7361E007FE8C4 /* TransactionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionType.swift; sourceTree = "<group>"; };
+		5ADA558E29D7378D007FE8C4 /* NumberTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTextField.swift; sourceTree = "<group>"; };
+		5ADA559029D737B8007FE8C4 /* CreateTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransactionViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ADA552F29D6E8F2007FE8C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AF57F0929E556010034C80D /* RangeCalendar in Frameworks */,
+				5AD358F929DB19800035E1D3 /* Algorithms in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5AC0AC1729DF0923008008AF /* AccountList */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3590D29DD80390035E1D3 /* CreateAccountView.swift */,
+				5AD3591829DDB1F80035E1D3 /* AccountsListView.swift */,
+			);
+			path = AccountList;
+			sourceTree = "<group>";
+		};
+		5AC0AC1829DF0943008008AF /* CategoriesView */ = {
+			isa = PBXGroup;
+			children = (
+				5AC0AC1929DF09FA008008AF /* CategoriesView.swift */,
+			);
+			path = CategoriesView;
+			sourceTree = "<group>";
+		};
+		5AC0AC1D29DF127B008008AF /* RKCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				5AC0AC1E29DF128C008008AF /* Manager */,
+				5AC0AC2D29DF1317008008AF /* RKCalendar.swift */,
+			);
+			path = RKCalendar;
+			sourceTree = "<group>";
+		};
+		5AC0AC1E29DF128C008008AF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5AC0AC1F29DF128C008008AF /* RKViewController.swift */,
+				5AC0AC2029DF128C008008AF /* RKManager.swift */,
+				5AC0AC2129DF128C008008AF /* RKWeekdayHeader.swift */,
+				5AC0AC2229DF128C008008AF /* RKMonth.swift */,
+				5AC0AC2329DF128C008008AF /* RKCell.swift */,
+				5AC0AC2429DF128C008008AF /* RKColorSettings.swift */,
+				5AC0AC2529DF128C008008AF /* RKDate.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5AD358E629DACB000035E1D3 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358E729DACB0B0035E1D3 /* Helper.swift */,
+				5AC0AC0429DEB57F008008AF /* CancelBag.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		5AD358EB29DADA9A0035E1D3 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358EC29DADAB70035E1D3 /* UserService.swift */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		5AD358F029DAF2870035E1D3 /* CreateCategoryView */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358F129DAF29A0035E1D3 /* CreateCategoryView.swift */,
+			);
+			path = CreateCategoryView;
+			sourceTree = "<group>";
+		};
+		5AD3590029DC594F0035E1D3 /* Datepicker */ = {
+			isa = PBXGroup;
+			children = (
+				5AC0AC1D29DF127B008008AF /* RKCalendar */,
+				5AD3590129DC595B0035E1D3 /* CustomDatePickerView.swift */,
+			);
+			path = Datepicker;
+			sourceTree = "<group>";
+		};
+		5AD3590629DC69690035E1D3 /* CategoryGroupView */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3590729DC698B0035E1D3 /* CategoryGroupView.swift */,
+				5AD3590929DD69200035E1D3 /* TransactionDetailsView.swift */,
+			);
+			path = CategoryGroupView;
+			sourceTree = "<group>";
+		};
+		5AD3591329DDAA9F0035E1D3 /* SideMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				5AC0AC1829DF0943008008AF /* CategoriesView */,
+				5AC0AC1729DF0923008008AF /* AccountList */,
+				5AD3591429DDAAB60035E1D3 /* SideMenuView.swift */,
+			);
+			path = SideMenuView;
+			sourceTree = "<group>";
+		};
+		5ADA552929D6E8F2007FE8C4 = {
+			isa = PBXGroup;
+			children = (
+				5ADA553429D6E8F2007FE8C4 /* Finances Helper */,
+				5ADA553329D6E8F2007FE8C4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5ADA553329D6E8F2007FE8C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA553229D6E8F2007FE8C4 /* Finances Helper.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ADA553429D6E8F2007FE8C4 /* Finances Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA556D29D71085007FE8C4 /* Models */,
+				5ADA554729D6E910007FE8C4 /* App */,
+				5ADA554629D6E907007FE8C4 /* ViewModels */,
+				5ADA554529D6E902007FE8C4 /* Views */,
+				5ADA554429D6E8FF007FE8C4 /* Utils */,
+				5ADA554329D6E8F7007FE8C4 /* Service */,
+				5ADA553929D6E8F4007FE8C4 /* Assets.xcassets */,
+				5ADA553B29D6E8F4007FE8C4 /* Preview Content */,
+			);
+			path = "Finances Helper";
+			sourceTree = "<group>";
+		};
+		5ADA553B29D6E8F4007FE8C4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA556529D70E51007FE8C4 /* Preview.swift */,
+				5ADA553C29D6E8F4007FE8C4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5ADA554329D6E8F7007FE8C4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358EB29DADA9A0035E1D3 /* UserService */,
+				5ADA555329D6F486007FE8C4 /* Model+Extansions */,
+				5ADA554829D6E919007FE8C4 /* CoreData */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5ADA554429D6E8FF007FE8C4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358E629DACB000035E1D3 /* Helper */,
+				5ADA555629D6F59B007FE8C4 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5ADA554529D6E902007FE8C4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358E929DAD3A30035E1D3 /* TagLayout.swift */,
+				5AD3591329DDAA9F0035E1D3 /* SideMenuView */,
+				5ADA556729D7104F007FE8C4 /* ViewComponens */,
+				5AD3590629DC69690035E1D3 /* CategoryGroupView */,
+				5ADA558629D73575007FE8C4 /* CreateTransaction */,
+				5ADA556129D70E06007FE8C4 /* RootView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5ADA554629D6E907007FE8C4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA555F29D70C70007FE8C4 /* RootViewModel.swift */,
+				5ADA559029D737B8007FE8C4 /* CreateTransactionViewModel.swift */,
+				5AD3590F29DD80B70035E1D3 /* CreateAccountViewModel.swift */,
+				5AD3591629DDAAC90035E1D3 /* SideMenuViewModel.swift */,
+				5AC0AC0229DEB50A008008AF /* AccountsListViewModel.swift */,
+				5AC0AC1B29DF0A02008008AF /* CategoriesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5ADA554729D6E910007FE8C4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA553529D6E8F2007FE8C4 /* Finances_HelperApp.swift */,
+				5ADA553729D6E8F2007FE8C4 /* ContentView.swift */,
+				5AC0AC0B29DF015B008008AF /* AppDelegate.swift */,
+				5AC0AC0E29DF01AA008008AF /* AppEnvironment.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5ADA554829D6E919007FE8C4 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA558429D72D0A007FE8C4 /* ResourceStore.swift */,
+				5ADA555129D6E995007FE8C4 /* CoreDataManager.swift */,
+				5ADA554B29D6E961007FE8C4 /* PersistenceController.swift */,
+				5ADA554E29D6E972007FE8C4 /* CoreDataContainer.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5ADA555329D6F486007FE8C4 /* Model+Extansions */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA555429D6F499007FE8C4 /* TransactionEntity.swift */,
+				5ADA555929D70598007FE8C4 /* AccountEntity+Ext.swift */,
+				5ADA555B29D70818007FE8C4 /* UserEntity.swift */,
+				5ADA558229D72C31007FE8C4 /* CategoryEntity.swift */,
+			);
+			path = "Model+Extansions";
+			sourceTree = "<group>";
+		};
+		5ADA555629D6F59B007FE8C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA555729D6F5AC007FE8C4 /* Date+Ext.swift */,
+				5ADA557029D71137007FE8C4 /* Double.swift */,
+				5ADA558029D727D9007FE8C4 /* View+Ext.swift */,
+				5AD358E429DAC8A10035E1D3 /* Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5ADA556129D70E06007FE8C4 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA557729D719FC007FE8C4 /* ViewComponents */,
+				5ADA556229D70E11007FE8C4 /* RootView.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		5ADA556729D7104F007FE8C4 /* ViewComponens */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3590029DC594F0035E1D3 /* Datepicker */,
+				5ADA558D29D73772007FE8C4 /* TextFileds */,
+				5ADA557A29D71BAC007FE8C4 /* Charts */,
+				5ADA556A29D71069007FE8C4 /* Currency */,
+			);
+			path = ViewComponens;
+			sourceTree = "<group>";
+		};
+		5ADA556A29D71069007FE8C4 /* Currency */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA556829D7105C007FE8C4 /* CurrencyView.swift */,
+			);
+			path = Currency;
+			sourceTree = "<group>";
+		};
+		5ADA556D29D71085007FE8C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA556E29D710BA007FE8C4 /* Currency.swift */,
+				5ADA558929D7361E007FE8C4 /* TransactionType.swift */,
+				5AD358E229DAC0520035E1D3 /* ChartData.swift */,
+				5AD358FC29DC38B90035E1D3 /* TransactionStatData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5ADA557729D719FC007FE8C4 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA557829D71A13007FE8C4 /* StatsView.swift */,
+				5AD358FA29DC33AD0035E1D3 /* TransactionNavigationTabView.swift */,
+				5AD358FE29DC3E9C0035E1D3 /* TransactionsListView.swift */,
+				5AD3590429DC5ADB0035E1D3 /* SheetDatePicker.swift */,
+				5AC0AC0929DEDB11008008AF /* MainSectionView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		5ADA557A29D71BAC007FE8C4 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358E029DAC00F0035E1D3 /* DonutChart.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		5ADA558629D73575007FE8C4 /* CreateTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				5AD358F029DAF2870035E1D3 /* CreateCategoryView */,
+				5ADA558729D7358C007FE8C4 /* CreateTransactionView.swift */,
+				5AD358EE29DAE30C0035E1D3 /* CategoriesTagsView.swift */,
+			);
+			path = CreateTransaction;
+			sourceTree = "<group>";
+		};
+		5ADA558D29D73772007FE8C4 /* TextFileds */ = {
+			isa = PBXGroup;
+			children = (
+				5ADA558E29D7378D007FE8C4 /* NumberTextField.swift */,
+			);
+			path = TextFileds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ADA553129D6E8F2007FE8C4 /* Finances Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ADA554029D6E8F4007FE8C4 /* Build configuration list for PBXNativeTarget "Finances Helper" */;
+			buildPhases = (
+				5ADA552E29D6E8F2007FE8C4 /* Sources */,
+				5ADA552F29D6E8F2007FE8C4 /* Frameworks */,
+				5ADA553029D6E8F2007FE8C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Finances Helper";
+			packageProductDependencies = (
+				5AD358F829DB19800035E1D3 /* Algorithms */,
+				5AF57F0829E556010034C80D /* RangeCalendar */,
+			);
+			productName = "Finances Helper";
+			productReference = 5ADA553229D6E8F2007FE8C4 /* Finances Helper.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ADA552A29D6E8F2007FE8C4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					5ADA553129D6E8F2007FE8C4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 5ADA552D29D6E8F2007FE8C4 /* Build configuration list for PBXProject "Finances Helper" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ADA552929D6E8F2007FE8C4;
+			packageReferences = (
+				5AD358F729DB19800035E1D3 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
+				5AF57F0729E556010034C80D /* XCRemoteSwiftPackageReference "RangeCalendarSwiftUI" */,
+			);
+			productRefGroup = 5ADA553329D6E8F2007FE8C4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ADA553129D6E8F2007FE8C4 /* Finances Helper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ADA553029D6E8F2007FE8C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADA553D29D6E8F4007FE8C4 /* Preview Assets.xcassets in Resources */,
+				5ADA553A29D6E8F4007FE8C4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ADA552E29D6E8F2007FE8C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD3590A29DD69200035E1D3 /* TransactionDetailsView.swift in Sources */,
+				5AC0AC2629DF128C008008AF /* RKViewController.swift in Sources */,
+				5AC0AC0329DEB50A008008AF /* AccountsListViewModel.swift in Sources */,
+				5ADA557129D71137007FE8C4 /* Double.swift in Sources */,
+				5AC0AC2A29DF128C008008AF /* RKCell.swift in Sources */,
+				5AC0AC2E29DF1317008008AF /* RKCalendar.swift in Sources */,
+				5AD358E129DAC00F0035E1D3 /* DonutChart.swift in Sources */,
+				5AD3591029DD80B70035E1D3 /* CreateAccountViewModel.swift in Sources */,
+				5AD3591929DDB1F80035E1D3 /* AccountsListView.swift in Sources */,
+				5AD358E529DAC8A10035E1D3 /* Color.swift in Sources */,
+				5AD358EA29DAD3A30035E1D3 /* TagLayout.swift in Sources */,
+				5AC0AC2B29DF128C008008AF /* RKColorSettings.swift in Sources */,
+				5ADA555229D6E995007FE8C4 /* CoreDataManager.swift in Sources */,
+				5ADA555A29D70598007FE8C4 /* AccountEntity+Ext.swift in Sources */,
+				5AD358FD29DC38B90035E1D3 /* TransactionStatData.swift in Sources */,
+				5ADA553829D6E8F2007FE8C4 /* ContentView.swift in Sources */,
+				5ADA556F29D710BA007FE8C4 /* Currency.swift in Sources */,
+				5AC0AC1A29DF09FA008008AF /* CategoriesView.swift in Sources */,
+				5AC0AC1C29DF0A02008008AF /* CategoriesViewModel.swift in Sources */,
+				5ADA556629D70E51007FE8C4 /* Preview.swift in Sources */,
+				5ADA558A29D7361E007FE8C4 /* TransactionType.swift in Sources */,
+				5AC0AC0F29DF01AA008008AF /* AppEnvironment.swift in Sources */,
+				5ADA558329D72C31007FE8C4 /* CategoryEntity.swift in Sources */,
+				5AC0AC2929DF128C008008AF /* RKMonth.swift in Sources */,
+				5AD3590829DC698B0035E1D3 /* CategoryGroupView.swift in Sources */,
+				5ADA555C29D70818007FE8C4 /* UserEntity.swift in Sources */,
+				5ADA556929D7105C007FE8C4 /* CurrencyView.swift in Sources */,
+				5ADA558129D727D9007FE8C4 /* View+Ext.swift in Sources */,
+				5ADA558F29D7378D007FE8C4 /* NumberTextField.swift in Sources */,
+				5AD358ED29DADAB70035E1D3 /* UserService.swift in Sources */,
+				5ADA555829D6F5AC007FE8C4 /* Date+Ext.swift in Sources */,
+				5AC0AC2729DF128C008008AF /* RKManager.swift in Sources */,
+				5AD3590529DC5ADB0035E1D3 /* SheetDatePicker.swift in Sources */,
+				5AD3591729DDAAC90035E1D3 /* SideMenuViewModel.swift in Sources */,
+				5AC0AC2C29DF128C008008AF /* RKDate.swift in Sources */,
+				5ADA558529D72D0A007FE8C4 /* ResourceStore.swift in Sources */,
+				5AD3591529DDAAB60035E1D3 /* SideMenuView.swift in Sources */,
+				5AD358E329DAC0520035E1D3 /* ChartData.swift in Sources */,
+				5AC0AC0A29DEDB11008008AF /* MainSectionView.swift in Sources */,
+				5ADA553629D6E8F2007FE8C4 /* Finances_HelperApp.swift in Sources */,
+				5AC0AC2829DF128C008008AF /* RKWeekdayHeader.swift in Sources */,
+				5AD358E829DACB0B0035E1D3 /* Helper.swift in Sources */,
+				5ADA555529D6F499007FE8C4 /* TransactionEntity.swift in Sources */,
+				5ADA556329D70E11007FE8C4 /* RootView.swift in Sources */,
+				5AD358F229DAF29A0035E1D3 /* CreateCategoryView.swift in Sources */,
+				5ADA557929D71A13007FE8C4 /* StatsView.swift in Sources */,
+				5AD358FB29DC33AD0035E1D3 /* TransactionNavigationTabView.swift in Sources */,
+				5AD358FF29DC3E9C0035E1D3 /* TransactionsListView.swift in Sources */,
+				5ADA555029D6E972007FE8C4 /* CoreDataContainer.xcdatamodeld in Sources */,
+				5ADA559129D737B8007FE8C4 /* CreateTransactionViewModel.swift in Sources */,
+				5AD3590229DC595B0035E1D3 /* CustomDatePickerView.swift in Sources */,
+				5ADA558829D7358C007FE8C4 /* CreateTransactionView.swift in Sources */,
+				5ADA556029D70C70007FE8C4 /* RootViewModel.swift in Sources */,
+				5AC0AC0529DEB57F008008AF /* CancelBag.swift in Sources */,
+				5ADA554C29D6E961007FE8C4 /* PersistenceController.swift in Sources */,
+				5AD358EF29DAE30C0035E1D3 /* CategoriesTagsView.swift in Sources */,
+				5AD3590E29DD80390035E1D3 /* CreateAccountView.swift in Sources */,
+				5AC0AC0C29DF015B008008AF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5ADA553E29D6E8F4007FE8C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5ADA553F29D6E8F4007FE8C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ADA554129D6E8F4007FE8C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Finances Helper/Preview Content\"";
+				DEVELOPMENT_TEAM = J5KX8VZN46;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaipreet.Finances-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5ADA554229D6E8F4007FE8C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Finances Helper/Preview Content\"";
+				DEVELOPMENT_TEAM = J5KX8VZN46;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jaipreet.Finances-Helper";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ADA552D29D6E8F2007FE8C4 /* Build configuration list for PBXProject "Finances Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADA553E29D6E8F4007FE8C4 /* Debug */,
+				5ADA553F29D6E8F4007FE8C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ADA554029D6E8F4007FE8C4 /* Build configuration list for PBXNativeTarget "Finances Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADA554129D6E8F4007FE8C4 /* Debug */,
+				5ADA554229D6E8F4007FE8C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5AD358F729DB19800035E1D3 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		5AF57F0729E556010034C80D /* XCRemoteSwiftPackageReference "RangeCalendarSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BogdanZyk/RangeCalendarSwiftUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5AD358F829DB19800035E1D3 /* Algorithms */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AD358F729DB19800035E1D3 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
+			productName = Algorithms;
+		};
+		5AF57F0829E556010034C80D /* RangeCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5AF57F0729E556010034C80D /* XCRemoteSwiftPackageReference "RangeCalendarSwiftUI" */;
+			productName = RangeCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5ADA554E29D6E972007FE8C4 /* CoreDataContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5ADA554F29D6E972007FE8C4 /* CoreDataContainer.xcdatamodel */,
+			);
+			currentVersion = 5ADA554F29D6E972007FE8C4 /* CoreDataContainer.xcdatamodel */;
+			path = CoreDataContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5ADA552A29D6E8F2007FE8C4 /* Project object */;
+}

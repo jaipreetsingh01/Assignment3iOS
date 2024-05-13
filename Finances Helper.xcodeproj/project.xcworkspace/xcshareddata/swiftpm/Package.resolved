@@ -1,0 +1,33 @@
+{
+  "originHash" : "9986481222cd5ae1ee27b5e537def12062f910a2e2887e61e2def7d6d13a02b0",
+  "pins" : [
+    {
+      "identity" : "rangecalendarswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BogdanZyk/RangeCalendarSwiftUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "61b4c5d38719bceae5c1769f9b1ed15d90263d6c"
+      }
+    },
+    {
+      "identity" : "swift-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-algorithms.git",
+      "state" : {
+        "revision" : "f6919dfc309e7f1b56224378b11e28bab5bccc42",
+        "version" : "1.2.0"
+      }
+    },
+    {
+      "identity" : "swift-numerics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-numerics.git",
+      "state" : {
+        "revision" : "0a5bc04095a675662cf24757cc0640aa2204253b",
+        "version" : "1.0.2"
+      }
+    }
+  ],
+  "version" : 3
+}
