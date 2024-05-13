@@ -44,12 +44,17 @@ struct SideMenuView: View {
                 switch type{
                 case .accounts:
                     AccountsListView(rootVM: rootVM)
-                case .settings:
-                    Text("Settings Page")
-                case .categories:
-                    Text("Category Page")
-                case .charts:
-                    Text("Charts Page")
+                case.blank:
+                    Text("Team Members: ")
+                case .team1:
+                    Text("Jaipreet Singh")
+                    Text("24900577")
+                case .team2:
+                    Text("Lance Derona")
+                    Text("24684817")
+                case .team3:
+                    Text("Kendrick Junio")
+                    Text("25118314")
                 default:
                     EmptyView()
                 }
@@ -101,7 +106,7 @@ extension SideMenuView {
     }
     
     enum Menu: Int, CaseIterable{
-        case main, accounts, categories, charts, settings
+        case main, accounts,  blank, team1, team2, team3
         
         var title: String{
             switch self{
@@ -109,12 +114,14 @@ extension SideMenuView {
                 return "Main"
             case .accounts:
                 return "Accounts"
-            case .categories:
-                return "Categories"
-            case .charts:
-                return "Charts"
-            case .settings:
-                return "Settings"
+            case .blank:
+                return "\n \nTeam Members: "
+            case .team1:
+                return "Jaipreet Singh"
+            case .team2:
+                return "Lance Derona"
+            case .team3:
+                return "Kendrick Junio"
             }
         }
         
@@ -122,7 +129,7 @@ extension SideMenuView {
             switch self{
             case .main:
                 return true
-            case .settings, .accounts, .charts, .categories:
+            case .accounts, .blank, .team1, .team2, .team3:
                 return false
             }
         }
