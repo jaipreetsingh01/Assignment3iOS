@@ -2,7 +2,7 @@
 //  AccountEntity+Ext.swift
 //  Finances Helper
 //
-//  Created by Lance  on 10/05/24.
+//  Created by Lance  on 10/05/24
 //
 
 
@@ -10,68 +10,78 @@ import Foundation
 import CoreData
 import SwiftUI
 
+// Extending AccountEntity to add computed properties and static methods
 extension AccountEntity{
     
-    
-    var friedlyBalance: String{
+    // Returns the account balance as a formatted string with a currency symbol
+    var friendlyBalance: String {
         balance.formattedWithAbbreviations(symbol: currencySymbol)
     }
     
-    var currency: Currency?{
+    // Returns the Currency object for the account's currency code, defaults to USD if not set
+    var currency: Currency? {
         Currency.currency(for: currencyCode ?? "USD")
     }
     
-    var balanceColor: Color{
+    // Provides a color representation based on the balance; positive balances are green, negative are red
+    var balanceColor: Color {
         balance > 0 ? .green : .red
     }
     
-    var currencySymbol: String{
+    // Retrieves the shortest form of the currency symbol, defaults to "$" if not available
+    var currencySymbol: String {
         currency?.shortestSymbol ?? "$"
     }
     
-    var wrappedColor: Color{
+    // Returns a Color object from a hex code stored in the color property, defaults to blue if not available
+    var wrappedColor: Color {
         guard let color else { return .blue }
         return Color(hex: color)
     }
     
-    static func create(title: String, currencyCode: String, balance: Double, color: String, members: Set<UserEntity>, context: NSManagedObjectContext) -> AccountEntity{
+    // Creates a new AccountEntity with specified properties and saves it to the provided Core Data context
+    static func create(title: String, currencyCode: String, balance: Double, color: String, members: Set<UserEntity>, context: NSManagedObjectContext) -> AccountEntity {
         let entity = AccountEntity(context: context)
-        entity.id = UUID().uuidString
-        entity.createAt = Date.now
+        entity.id = UUID().uuidString // Assigns a unique identifier
+        entity.createAt = Date.now // Sets the creation date to the current time
         entity.title = title
         entity.currencyCode = currencyCode
         entity.balance = balance
         entity.color = color
-        entity.members = members as NSSet
-        entity.creatorId = members.first?.id ?? ""
-        entity.transactions = []
+        entity.members = members as NSSet // Stores members related to this account
+        entity.creatorId = members.first?.id ?? "" // Sets the creator ID to the ID of the first member, if available
+        entity.transactions = [] // Initializes transactions as an empty array
         
-        context.saveContext()
+        context.saveContext() // Saves changes to the Core Data context
         
         return entity
     }
     
-    static func updateAccount(for account: AccountEntity){
+    // Updates and saves changes to an existing AccountEntity in its Core Data context
+    static func updateAccount(for account: AccountEntity) {
         guard let context = account.managedObjectContext else { return }
         context.saveContext()
     }
     
-    static func requestAll() -> NSFetchRequest<AccountEntity>{
+    // Returns a fetch request for all AccountEntity instances sorted by creation date
+    static func requestAll() -> NSFetchRequest<AccountEntity> {
         let fetchRequest = NSFetchRequest<AccountEntity>(entityName: "AccountEntity")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createAt", ascending: true)]
         fetchRequest.propertiesToFetch = ["id", "currencyCode", "title", "balance"]
         return fetchRequest
     }
     
-    static func request(for id: String) -> NSFetchRequest<AccountEntity>{
+    // Returns a fetch request for an AccountEntity instance by its identifier
+    static func request(for id: String) -> NSFetchRequest<AccountEntity> {
         let fetchRequest = NSFetchRequest<AccountEntity>(entityName: "AccountEntity")
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "createAt", ascending: true)]
-        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id) // Filters fetch request by ID
         fetchRequest.propertiesToFetch = ["id", "currencyCode", "title", "balance"]
         return fetchRequest
     }
     
-    static func remove(_ item: AccountEntity){
+    // Deletes the specified AccountEntity from its Core Data context and saves the context
+    static func remove(_ item: AccountEntity) {
         guard let context = item.managedObjectContext else { return }
         context.delete(item)
         context.saveContext()
