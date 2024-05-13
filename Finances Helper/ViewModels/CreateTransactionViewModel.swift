@@ -37,7 +37,7 @@ class CreateTransactionViewModel: ObservableObject {
         self.transactionType = transactionType
         categoriesStore = ResourceStore(context: context)
         
-        startSubscribingCategories()
+        startSubsCategories()
         
         fetchCategories()
     }
@@ -59,7 +59,7 @@ class CreateTransactionViewModel: ObservableObject {
     }
     
     // Subscribe to changes in categories
-    private func startSubscribingCategories() {
+    private func startSubsCategories(){
         categoriesStore.resources
             .sink { categories in
                 self.categories = categories
