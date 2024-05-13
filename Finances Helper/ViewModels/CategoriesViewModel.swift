@@ -1,5 +1,4 @@
-//
-//  CategoriesViewModel.swift
+// CategoriesViewModel.swift
 //  Finances Helper
 //
 //  Created by Kendrick  on 10/05/24.
@@ -8,33 +7,42 @@
 import Foundation
 import CoreData
 
-class CategoriesViewModel: ObservableObject{
+// ViewModel for managing categories
+class CategoriesViewModel: ObservableObject {
     
-    
+    // Published property for categories
     @Published private(set) var categories = [CategoryEntity]()
     
+    // CancelBag for managing subscriptions
     private var cancelBag = CancelBag()
+    
+    // Core Data context
     private let context: NSManagedObjectContext
+    
+    // ResourceStore for managing CategoryEntity resources
     private let categoriesStore: ResourceStore<CategoryEntity>
     
-    init(context: NSManagedObjectContext){
+    // Initialize CategoriesViewModel with a Core Data context
+    init(context: NSManagedObjectContext) {
         self.context = context
         self.categoriesStore = ResourceStore(context: context)
         
-        subsCategories()
+        // Subscribe to categories changes and fetch categories
+        subscribeCategories()
         fetchCategories()
     }
     
-    
-    private func fetchCategories(){
+    // Fetch categories from Core Data
+    private func fetchCategories() {
         let request = CategoryEntity.request()
         categoriesStore.fetch(request)
     }
     
-    private func subsCategories(){
+    // Subscribe to categories changes
+    private func subscribeCategories() {
         categoriesStore.resources
-            .sink {[weak self] categories in
-                guard let self = self else {return}
+            .sink { [weak self] categories in
+                guard let self = self else { return }
                 self.categories = categories
             }
             .store(in: cancelBag)
