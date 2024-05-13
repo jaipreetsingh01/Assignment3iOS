@@ -30,7 +30,7 @@ final class Helper{
         
         for i in mergeData.indices {
             let percentage = (mergeData[i].value / total)
-            mergeData[i].persentage = percentage
+            mergeData[i].percentage = percentage
             mergeData[i].slicePercent =  (i == 0 ? 0.0 : mergeData[i - 1].slicePercent) + percentage
         }
         return mergeData
