@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 struct Currency: Identifiable {
     
     var id: String{ code }
@@ -59,7 +60,7 @@ struct Currency: Identifiable {
     
     
     static var popularCurrency: [Currency]{
-        let code = ["USD", "EUR", "GBR", "RUB", "UAH", "CNY", "JPY"]
+        let code = ["AUD","USD", "EUR", "GBR", "RUB", "UAH", "CNY", "JPY"]
         return code.compactMap({Currency.currency(for: $0)})
     }
 }
