@@ -8,16 +8,15 @@
 import Foundation
 
 
-
 struct Currency: Identifiable {
     
     var id: String{ code }
-    /// Returns the currency code. For example USD or EUD
+    // Returns the currency code. For example USD or EUD
     let code: String
     
     var name: String?
     
-    /// Returns currency symbols. For example ["USD", "US$", "$"] for USD, ["RUB", "₽"] for RUB or ["₴", "UAH"] for UAH
+    // Returns currency symbols, eg $ for USD
     let symbols: [String]
     
     /// Returns shortest currency symbols. For example "$" for USD or "₽" for RUB
@@ -25,7 +24,7 @@ struct Currency: Identifiable {
         return symbols.min { $0.count < $1.count } ?? ""
     }
     
-    /// Returns information about a currency by its code.
+    // Returns information about a currency by its code.
     static func currency(for code: String) -> Currency? {
         return cache[code]
     }
@@ -60,7 +59,7 @@ struct Currency: Identifiable {
     
     
     static var popularCurrency: [Currency]{
-        let code = ["AUD","USD", "EUR", "GBR", "RUB", "UAH", "CNY", "JPY"]
+        let code = ["USD", "EUR", "GBR", "AUD", "INR"]
         return code.compactMap({Currency.currency(for: $0)})
     }
 }
