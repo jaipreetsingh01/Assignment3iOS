@@ -14,7 +14,7 @@ import SwiftUI
 extension AccountEntity{
     
     // Returns the account balance as a formatted string with a currency symbol
-    var friendlyBalance: String {
+    var friedlyBalance: String {
         balance.formattedWithAbbreviations(symbol: currencySymbol)
     }
     
