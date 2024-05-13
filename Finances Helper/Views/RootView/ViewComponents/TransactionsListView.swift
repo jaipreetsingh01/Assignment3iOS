@@ -5,6 +5,7 @@
 //  Created by Jaipreet  on 10/05/24.
 //
 
+
 import SwiftUI
 
 struct TransactionsListView: View {
@@ -26,7 +27,7 @@ struct TransactionsListView: View {
                             .padding(.vertical, 5)
                             .background(group.color, in: Capsule())
                         Spacer()
-                        Text("\(Int(group.percentage * 100))%")
+                        Text("\(Int(group.persentage * 100))%")
                             .foregroundColor(.secondary)
                         Text(group.friendlyTotal)
                             .foregroundColor(.black)
