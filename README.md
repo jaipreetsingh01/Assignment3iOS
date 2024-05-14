@@ -7,7 +7,7 @@ Budget App for income & expense management.
 
 ## Target Audience:
 
-To help Internation students, or people working multiple jobs to manage their accounts - Expenses or Incomes
+To help Internation students, or people working multiple jobs to manage their multiple accounts - Expenses or Incomes
 
 ## Problem Statement:
 - Create an account for any currency
