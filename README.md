@@ -12,7 +12,8 @@ To help Internation students, or people working multiple jobs to manage their mu
 ## Problem Statement:
 - Create an account for any currency
 - Managing income/expense
-- Balance calculation
+- Showcase your spending via Charts seperated by categories
+- Balance calculation/s
 - Creating categories and subcategories
 - Total income/expense for selected date
 
