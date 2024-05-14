@@ -1,4 +1,5 @@
 # Assignment 3 - iOS
+# Finance Manager App 
 
 Budget App for income & expense management.
 
