@@ -4,6 +4,10 @@ Budget App for income & expense management.
 
  SwiftUI
 
+## Problem Statement:
+
+To help Internation students, or people working multiple jobs to manage their accounts - Expenses or Incomes
+
 ## Functions:
 - Create an account for any currency
 - Managing income/expense
