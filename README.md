@@ -18,8 +18,8 @@ To help Internation students, or people working multiple jobs to manage their mu
 - Total income/expense for selected date
 
 ## Group Member
- - Kendrick
- - Lance
- - Jaipreet
+ - Kendrick Junio - 25118314
+ - Lance Derona - 24684817
+ - Jaipreet Singh - 24900577
 
 Note : This is a backup repository, hence only few commits - Orignal Repo is https://github.com/jaipreetsingh01/iOS Assignment 3
